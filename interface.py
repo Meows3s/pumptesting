@@ -3,6 +3,7 @@
 import struct
 import time
 
+#from "/home/mo/venv/pumptesting-venv/lib/python3.14/site-packages" import serial
 import serial
 
 #command ID numbers
@@ -223,8 +224,8 @@ class VESC:
         self.close()
 
 if __name__ == "__main__":
-    #PORT = "/dev/ttyACM0" #linux port
-    PORT = "COM3"
+    PORT = "/dev/ttyACM0" #linux port
+    #PORT = "COM3"
 
     with VESC(PORT) as v:
         fw = v.get_firmware_version()
